@@ -38,10 +38,12 @@ public class Monster {
         
         image = new Image("resources/monster.png");
     }
+    
     public Monster(int H) throws SlickException{
         this.health = H;        
         image = new Image("resources/monster.png");
     }
+    
     public Monster() throws SlickException{
         image = new Image("resources/monster.png");
     }
@@ -176,5 +178,4 @@ public class Monster {
     public void setDistanceBase(double distanceBase) {
         this.distanceBase = distanceBase;
     }
-    
 }

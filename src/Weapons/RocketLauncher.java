@@ -4,6 +4,9 @@
  */
 package Weapons;
 
+/**
+ * Imports
+ */
 import Classes.Weapon;
 
 /**
@@ -23,7 +26,6 @@ public class RocketLauncher  extends Weapon{
     
     
     //constructor
-    
     public RocketLauncher() {
         
     }
@@ -108,7 +110,4 @@ public class RocketLauncher  extends Weapon{
     public int getRange() {
         return this.range;
     }
-    
 }
-
-

@@ -5,6 +5,9 @@
  */
 package Soldiers;
 
+/**
+ * Imports
+ */
 import Classes.Player;
 import org.newdawn.slick.*;
 

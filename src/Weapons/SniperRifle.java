@@ -4,6 +4,9 @@
  */
 package Weapons;
 
+/**
+ * Imports
+ */
 import Classes.Weapon;
 
 /**
@@ -22,7 +25,6 @@ public class SniperRifle  extends Weapon{
     
     
     //constructor
-    
     public SniperRifle()
     {
         
@@ -108,5 +110,4 @@ public class SniperRifle  extends Weapon{
     public int getRange() {
         return this.range;
     }
-    
 }

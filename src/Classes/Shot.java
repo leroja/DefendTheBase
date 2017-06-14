@@ -4,6 +4,9 @@
  */
 package Classes;
 
+/**
+ * Imports
+ */
 import org.newdawn.slick.*;
 
 /**
@@ -22,7 +25,7 @@ public class Shot {
     private double angleToTurn;
     public Image shotImage = null;
     
-    //constructor
+    // constructor
     public Shot(float startingX, float startingY, int damage, float speed, String imageName) throws SlickException{
         this.damage = damage;
         this.speed = speed;
@@ -30,7 +33,6 @@ public class Shot {
         this.yCord = startingY;
         
         shotImage = new Image(imageName);
-        
     }
     
     public Shot(int damage, float speed, String ImageName) throws SlickException{
@@ -44,8 +46,8 @@ public class Shot {
     
     }
     
-    //methods
-
+    // methods
+    
     public float getxCord() {
         return xCord;
     }
@@ -117,5 +119,4 @@ public class Shot {
     public void setAngleToTurn(double angleToTurn) {
         this.angleToTurn = angleToTurn;
     }
-    
 }

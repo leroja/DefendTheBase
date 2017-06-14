@@ -4,6 +4,9 @@
  */
 package Weapons;
 
+/**
+ * Imports
+ */
 import Classes.Weapon;
 
 /**
@@ -86,6 +89,4 @@ public class FlameThrower extends Weapon{
     public int getRange() {
         return this.range;
     }
-    
 }
-

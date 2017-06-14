@@ -1,7 +1,9 @@
 
 package game;
 
-
+/**
+ * Imports
+ */
 import Weapons.*;
 import Classes.*;
 import java.util.*;
@@ -30,7 +32,9 @@ public class MainGame extends BasicGame{
     
     private double angleToTurn; // ta bort sen och andra tillbaka på det andra stället
     
-    
+    // TODO
+    // Change collision detection methods
+    // split the code in to a more readable state
     
 
     public MainGame(String title){
@@ -157,7 +161,7 @@ public class MainGame extends BasicGame{
          
 
          
-         // turns the game off if the escape key is pressed
+        // turns the game off if the escape key is pressed
         if(input.isKeyDown(Input.KEY_ESCAPE)){
             System.exit(0);
         }
@@ -450,7 +454,7 @@ public class MainGame extends BasicGame{
     public void render(GameContainer gc, Graphics g) throws SlickException{
         Background.draw(0, 0);
         Base.draw(base.getCordX(), base.getCordX(), scale1); 
-         
+        
         for(int i = 0; i < weapon.getCurrentNbrOfShots(); i++){
             ShotArray[i].shotImage.draw(ShotArray[i].getxCord(),ShotArray[i].getyCord());
         }

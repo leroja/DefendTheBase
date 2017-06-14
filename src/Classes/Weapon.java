@@ -10,11 +10,6 @@ package Classes;
  * @author Lennart
  */
 
-import Weapons.*;
-import Classes.*;
-import java.util.*;
-import org.newdawn.slick.*;
-
 public class Weapon {
     private int damage;
     private float speed;
@@ -89,7 +84,6 @@ public class Weapon {
     public void setMaxShots(int MaxShots) {
         this.maxShots = MaxShots;
     }
-    
 }
 
 

@@ -18,6 +18,7 @@ public class Base {
     public Base(){
         
     }
+    
     public Base(int h, float X, float Y){
         this.health = h;
         this.cordX = X;
@@ -58,5 +59,4 @@ public class Base {
     public void setCordY(float cordY) {
         this.cordY = cordY;
     }
-    
 }

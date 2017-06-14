@@ -4,6 +4,9 @@
  */
 package Classes;
 
+/**
+ * Imports
+ */
 import org.newdawn.slick.Image;
 
 /**
@@ -27,14 +30,14 @@ public class Player {
         
     }
     public Player(int H, float X, float Y){
-    
-        
+        this.health = H;
+        this.maxHealth = H;
+        this.cordX = X;
+        this.cordY = Y;
     }
     
-    
-//     methods
+    // methods
 
-    
     public Image getPlayerImage() {
         return playerImage;
     }
@@ -98,5 +101,4 @@ public class Player {
     public void setOrginY(float orginY) {
         this.orginY = orginY;
     }
-    
 }
