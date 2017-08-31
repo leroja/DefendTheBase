@@ -4,59 +4,95 @@
  */
 package Classes;
 
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import org.newdawn.slick.GameContainer;
+import org.newdawn.slick.Graphics;
+import org.newdawn.slick.Image;
+import org.newdawn.slick.SlickException;
+import org.newdawn.slick.geom.Rectangle;
+
 /**
  *
  * @author Lennart
  */
-public class Base {
+public class Base extends Entity{
     private int maxHealth = 100;
     private int health = maxHealth;
-    private float cordX = 270;
-    private float cordY = 270;
-     
-    //constructor
+
+    /**
+     *
+     */
     public Base(){
-        
+        try {
+            sprite = new Sprite(new Image("resources/base1.png"));
+        } catch (SlickException ex) {
+            Logger.getLogger(Base.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        CoordX = 270;
+        CoordY = 270;
+        BoundingShape = new Rectangle(CoordX, CoordY, sprite.getWidth(), 
+                sprite.getHeight());
     }
     
+    /**
+     *
+     * @param h Health of the base
+     * @param X X coordinate
+     * @param Y Y coordinate
+     */
     public Base(int h, float X, float Y){
         this.health = h;
-        this.cordX = X;
-        this.cordY = Y;
+        this.CoordX = X;
+        this.CoordY = Y;
+        try {
+            sprite = new Sprite(new Image("resources/base1.png"));
+        } catch (SlickException ex) {
+            Logger.getLogger(Base.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        BoundingShape = new Rectangle(CoordX, CoordY, sprite.getWidth(), 
+                sprite.getHeight());
     }
     
  
     //Methods
+    
+    
+    @Override
+    public void Update(GameContainer gc, int delta) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 
+    @Override
+    public void Render(GameContainer gc, Graphics g) {
+        sprite.draw(g, CoordX, CoordY);
+    }
+    
+    /**
+     * Getter and Setters
+     */
+
+    /**
+     *
+     * @return
+     */
     public int getMaxHealth() {
         return maxHealth;
     }
 
-    public void setMaxHealth(int maxHealth) {
-        this.maxHealth = maxHealth;
-    }
-
+    /**
+     *
+     * @return
+     */
     public int getHealth() {
         return health;
     }
 
+    /**
+     *
+     * @param health
+     */
     public void setHealth(int health) {
         this.health = health;
-    }
-
-    public float getCordX() {
-        return cordX;
-    }
-
-    public void setCordX(float cordX) {
-        this.cordX = cordX;
-    }
-
-    public float getCordY() {
-        return cordY;
-    }
-
-    public void setCordY(float cordY) {
-        this.cordY = cordY;
     }
 }
